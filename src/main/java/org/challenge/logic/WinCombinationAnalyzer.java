@@ -23,6 +23,13 @@ public class WinCombinationAnalyzer {
         this.config = config;
     }
 
+    /**
+     * Calculates the total reward based on the provided bet amount and the win combinations in the configuration.
+     * Bonus rewards are added if applicable.
+     *
+     * @param betAmount The amount of bet placed.
+     * @return An OutputPojo object containing the matrix, total reward, matched win combinations, and selected bonus symbol.
+     */
     public OutputPojo calculateTotalReward(Double betAmount) {
         double totalReward;
 
@@ -59,6 +66,13 @@ public class WinCombinationAnalyzer {
         );
     }
 
+    /**
+     * Checks the win condition for a specific combination.
+     *
+     * @param name           The name of the win combination.
+     * @param winCombination The WinCombination object containing the details of the combination.
+     * @return True if the win condition is met, otherwise false.
+     */
     private boolean checkWinCondition(String name, WinCombination winCombination) {
         // Implement logic to check the specific win condition
         return switch (winCombination.getGroup()) {
@@ -68,6 +82,13 @@ public class WinCombinationAnalyzer {
         };
     }
 
+    /**
+     * Checks if the same symbols meet the win condition.
+     *
+     * @param name           The name of the win combination.
+     * @param winCombination The WinCombination object containing the details of the combination.
+     * @return True if the win condition is met, otherwise false.
+     */
     public boolean checkSameSymbols(String name, WinCombination winCombination) {
         List<String> arraysString = Stream.of(matrix).flatMap(Stream::of).toList();
 

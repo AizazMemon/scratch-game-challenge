@@ -14,6 +14,14 @@ public class MatrixGenerator {
         this.config = config;
     }
 
+    /**
+     * Generates a matrix of symbols based on the configuration.
+     * The matrix size is determined by the number of rows and columns specified in the configuration.
+     * Symbols are randomly selected for each cell based on the probabilities defined in the configuration.
+     * Bonus symbols may also be inserted randomly into the matrix.
+     *
+     * @return A 2D array representing the generated matrix of symbols.
+     */
     public String[][] generateMatrix() {
         int rows = config.getRows();
         int columns = config.getColumns();
@@ -30,6 +38,13 @@ public class MatrixGenerator {
         return matrix;
     }
 
+    /**
+     * Inserts bonus symbols into the matrix based on the configuration.
+     * The number of bonus symbols inserted is determined by the number of bonus symbols specified in the configuration.
+     * Bonus symbols are randomly placed in the matrix.
+     *
+     * @param matrix The 2D array representing the matrix of symbols.
+     */
     private void insertBonusSymbols(String[][] matrix) {
         List<String> bonusSymbols = config.convertProbabilitiesToSymbols(config.getProbabilities().getBonusSymbols()
                 .getSymbols());
