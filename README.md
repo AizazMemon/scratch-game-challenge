@@ -27,11 +27,17 @@ The game's behavior is defined in a JSON configuration file, which includes:
 
 **Output:** The generated matrix, final reward amount, applied winning combinations, and applied bonus symbol (if any).
 
-#6. Run the application
+#6. Run the Application
+
+## Requirements ##
+
+- JDK >= 17
+- Maven
+- libraries: Jackson and Lombok
 ```bash
  java -jar <your-jar-file> --config config.json --betting-amount 100
 ```
 E.g:
 ```bash
-java -jar --config src/main/resources/config.json --betting-amount 100 
+java -jar --config src/main/resources/config.json --betting-amount 100
 ```
