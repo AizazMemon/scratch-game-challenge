@@ -1,0 +1,12 @@
+{
+  "matrix": [
+    ["+500", "F", "F"],
+    ["E", "D", "D"],
+    ["F", "C", "C"]
+  ],
+  "reward": 650.0,
+  "applied_winning_combinations": [
+    "same_symbol_3_times"
+  ],
+  "applied_bonus_symbol": "+500"
+}
