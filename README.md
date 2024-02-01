@@ -39,5 +39,5 @@ The game's behavior is defined in a JSON configuration file, which includes:
 ```
 E.g:
 ```bash
-java -jar --config src/main/resources/config.json --betting-amount 100
+java -jar target/scratch-game-1.jar --config src/main/resources/config.json --betting-amount 100
 ```
